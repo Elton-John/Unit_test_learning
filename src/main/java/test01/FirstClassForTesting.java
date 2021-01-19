@@ -1,3 +1,5 @@
+package test01;
+
 public class FirstClassForTesting {
     public static void main(String[] args) {
 

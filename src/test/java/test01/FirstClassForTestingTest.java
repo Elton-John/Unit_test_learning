@@ -1,4 +1,7 @@
+package test01;
+
 import org.junit.Test;
+import test01.FirstClassForTesting;
 
 import static org.junit.Assert.*;
 
