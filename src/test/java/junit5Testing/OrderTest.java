@@ -1,5 +1,7 @@
 package junit5Testing;
 
+import org.junit.jupiter.api.AfterEach;
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
 import java.util.List;
@@ -9,10 +11,20 @@ import static org.hamcrest.Matchers.*;
 
 class OrderTest {
 
+    private Order order;
+
+    @BeforeEach
+    void initialOrder() {
+        order = new Order();
+    }
+
+    @AfterEach
+    void cleanUp(){
+        order.cancel();
+    }
+
     @Test
     void newlyCreatedOrderShouldHaveEmptyListOfMealsSet() {
-        //given
-        Order order = new Order();
         //when
         List<Meal> meals = order.getMeals();
         //then
@@ -20,9 +32,8 @@ class OrderTest {
     }
 
     @Test
-    void addingMealToOrderShouldIncreaseMealList () {
+    void addingMealToOrderShouldIncreaseMealList() {
         //given
-        Order order = new Order();
         Meal meal = new Meal(10, "pizza");
         //when
         order.addMealToOrder(meal);
@@ -35,7 +46,6 @@ class OrderTest {
     @Test
     void removingMealFromOrderShouldDecreaseMealList() {
         //given
-        Order order = new Order();
         Meal meal = new Meal(10, "pizza");
         //when
         order.addMealToOrder(meal);
@@ -43,6 +53,6 @@ class OrderTest {
         //then
         assertThat(order.getMeals(), empty());
         assertThat(order.getMeals(), not(contains(meal)));
-        assertThat(order.getMeals(),not(hasItem(meal)));
+        assertThat(order.getMeals(), not(hasItem(meal)));
     }
 }

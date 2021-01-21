@@ -1,9 +1,8 @@
 package test01;
 
-import org.junit.Test;
-import test01.SecondClassForTesting;
+import org.junit.jupiter.api.Test;
 
-import static org.junit.Assert.*;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class SecondClassForTestingTest {
 

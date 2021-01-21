@@ -1,6 +1,6 @@
 package junit5Testing;
 
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
 
 import static org.hamcrest.CoreMatchers.*;
 import static org.hamcrest.MatcherAssert.assertThat;
@@ -9,7 +9,7 @@ import static org.junit.jupiter.api.Assertions.*;
 public class AccountTest {
 
     @Test
-    public void newAccountShouldBeNotActive(){
+    public void newAccountShouldBeNotActive() {
         //given // when
         Account account = new Account();
         //then
@@ -18,7 +18,7 @@ public class AccountTest {
     }
 
     @Test
-    public void accountShouldBeActiveAfterActivate(){
+    public void accountShouldBeActiveAfterActivate() {
         //given
         Account account = new Account();
         //when
@@ -29,7 +29,7 @@ public class AccountTest {
     }
 
     @Test
-    public void newlyCreateAccountShouldNotHaveAddressSet(){
+    public void newlyCreateAccountShouldNotHaveAddressSet() {
         //given
         Account account = new Account();
         //then
@@ -38,7 +38,7 @@ public class AccountTest {
     }
 
     @Test
-    public void accountShouldNotBeNullWhenAddressSet(){
+    public void accountShouldNotBeNullWhenAddressSet() {
         //given
         Account account = new Account();
         Address address = new Address("Popowicka", "Wrocław");

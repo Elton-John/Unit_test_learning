@@ -1,9 +1,10 @@
 package test02;
 
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
 
-import static org.junit.Assert.*;
-import static org.hamcrest.CoreMatchers.*;
+import static org.hamcrest.CoreMatchers.is;
+import static org.hamcrest.MatcherAssert.assertThat;
+import static org.junit.jupiter.api.Assertions.assertThrows;
 
 public class MaxValueTest {
 
@@ -26,12 +27,14 @@ public class MaxValueTest {
     }
 
 
-    @Test(expected = RuntimeException.class)
+    //  @Test(expected = RuntimeException.class)
+    @Test
     public void shouldThrowExceptionWhenArrayIsEmpty() {
         //given
         int[] emptyArray = {};
         //when //then
-        MaxValue.largest(emptyArray);
+        // MaxValue.largest(emptyArray);
+        assertThrows(RuntimeException.class, () -> MaxValue.largest(emptyArray));
 
     }
 }

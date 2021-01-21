@@ -1,9 +1,10 @@
 package test02;
 
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
 
-import static org.junit.Assert.*;
-import static org.hamcrest.CoreMatchers.*;
+import static org.hamcrest.CoreMatchers.is;
+import static org.hamcrest.MatcherAssert.assertThat;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class FirstTest {
 
@@ -16,7 +17,7 @@ public class FirstTest {
         //when
         String valueToCheck = First.concatString(a, b);
         //then
-        assertEquals("should be concat", expected, valueToCheck);
+        assertEquals( expected, valueToCheck);
     }
 
     @Test
@@ -40,7 +41,7 @@ public class FirstTest {
         //when
         String valueToCheck = First.concatString(a, b);
         //then
-       assertThat(valueToCheck, is(expected));
+        assertThat(valueToCheck, is(expected));
     }
 
     @Test
@@ -52,6 +53,6 @@ public class FirstTest {
         //when
         double valueToCheck = First.multiply(a, b);
         //then
-       assertThat(valueToCheck, is(expected));
+        assertThat(valueToCheck, is(expected));
     }
 }

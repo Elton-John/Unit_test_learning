@@ -1,16 +1,15 @@
 package test01;
 
-import org.junit.Test;
-import test01.FirstClassForTesting;
+import org.junit.jupiter.api.Test;
 
-import static org.junit.Assert.*;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class FirstClassForTestingTest {
 
 
     @Test
     public void test() {
-        assertEquals(4, 2*2);
+        assertEquals(4, 2 * 2);
     }
 
     @Test
