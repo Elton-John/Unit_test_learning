@@ -18,6 +18,11 @@ public class Account {
         this.active=false;
     }
 
+    public Account(Address address) {
+        this.address = address;
+        this.active = true;
+    }
+
     public void activate(){
         this.active = true;
     }
