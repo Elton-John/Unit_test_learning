@@ -1,4 +1,4 @@
-package junit5Testing;
+package junit5Testing.order;
 
 public enum ORDER_STATUS {
 

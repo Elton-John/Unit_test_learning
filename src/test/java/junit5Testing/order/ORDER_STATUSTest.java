@@ -1,5 +1,6 @@
-package junit5Testing;
+package junit5Testing.order;
 
+import junit5Testing.order.ORDER_STATUS;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.EnumSource;
 

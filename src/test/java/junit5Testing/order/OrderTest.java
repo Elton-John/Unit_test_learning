@@ -1,5 +1,7 @@
-package junit5Testing;
+package junit5Testing.order;
 
+import junit5Testing.Meal;
+import junit5Testing.order.Order;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;

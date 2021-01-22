@@ -1,4 +1,6 @@
-package junit5Testing;
+package junit5Testing.order;
+
+import junit5Testing.Meal;
 
 import java.util.ArrayList;
 import java.util.List;

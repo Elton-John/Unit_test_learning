@@ -1,5 +1,7 @@
-package junit5Testing;
+package junit5Testing.account;
 
+import junit5Testing.Address;
+import junit5Testing.account.Account;
 import org.junit.jupiter.api.Test;
 
 import static org.hamcrest.CoreMatchers.*;

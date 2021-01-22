@@ -1,4 +1,6 @@
-package junit5Testing;
+package junit5Testing.account;
+
+import junit5Testing.Address;
 
 public class Account {
     private boolean active;
