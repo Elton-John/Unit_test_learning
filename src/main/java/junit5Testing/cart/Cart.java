@@ -1,5 +1,6 @@
-package junit5Testing;
+package junit5Testing.cart;
 
+import junit5Testing.Meal;
 import junit5Testing.order.Order;
 
 import java.util.ArrayList;
@@ -14,6 +15,10 @@ public class Cart {
 
     public void clear(){
         orders.clear();
+    }
+
+    public List<Order> getOrders() {
+        return orders;
     }
 
     public void simulateManyOrders(){
